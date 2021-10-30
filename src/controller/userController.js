@@ -117,7 +117,7 @@ exports.Login = async (req, res) => {
 }
 
 exports.getAllUsers = async (req, res) => {
-    try{
+    try{Date.now()
         await UserModel.find({}, (err, data)=>{
             if(err) res.status(400).json("Erreur de chargement");
             res.status(200).json(data)

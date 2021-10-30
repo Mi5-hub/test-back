@@ -5,9 +5,10 @@
   "engines": {
     "node": "12.19.0",
     "npm": "6.14.8"
-    },
+  },
   "scripts": {
-    "server": "npx nodemon app.js"
+    "server": "npx nodemon app.js",
+    "start": "serve -s build"
   },
   "author": "Mino Randy",
   "license": "ISC",
@@ -22,6 +23,7 @@
     "mongoose": "^5.13.2",
     "multer": "^1.4.2",
     "nodemon": "^2.0.12",
+    "serve": "^12.0.1",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6"
   }
