@@ -5,6 +5,7 @@ const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUIexp = require ('swagger-ui-express');
 const router = express.Router();
 const cors = require('cors');
+require('./views/index.html')
 
 const bodyParser = require("body-parser")
 
@@ -12,7 +13,7 @@ const bodyParser = require("body-parser")
 const app = express()
 
 router.get('/', function (req, res, next) {
-  return res.sendFile(path.join(__dirname + '/views/index.html'));
+  return res.sendFile(path.join(__dirname + './views/index.html'));
 });
 app.use(
   cors({
