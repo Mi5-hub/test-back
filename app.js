@@ -12,7 +12,7 @@ const bodyParser = require("body-parser")
 
 const app = express()
 
-router.get('/', function (req, res, next) {
+router.get('https://test-back-sayna.herokuapp.com/', function (req, res, next) {
   return res.sendFile(path.join(__dirname + './views/index.html'));
 });
 app.use(
