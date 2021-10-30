@@ -31,7 +31,7 @@ exports.SignUp = async (req, res) => {
             tokens:{
                 token:token,
                 refresh_token:token,
-                createdAt:TimeZone
+                createdAt: `${Math.floor(Date.now()/1000)}`
             }
         })
     }catch(err){
@@ -100,13 +100,15 @@ exports.Login = async (req, res) => {
         const token = jwt.sign({ id: user.id }, config.secret, {
             expiresIn: 86400, // 24 hours
           });
+        const time = Date.now()
+        const date = Math.floor(time/1000)
         res.status(200).json({
             error:false,
             message:  "L'utilisateur a été authentifié avec succès",
             tokens:{
                 token:token,
                 refresh_token:token,
-                createdAt: TimeZone.now
+                createdAt: date
             }
         })
     } catch(err){
